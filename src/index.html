@@ -1,41 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
-    
-</head>
-<body>
+  </head>
+  <body>
     <div id="main">
-        <h1 id="start">Welcome to Github Scrapper</h1>
+      <h1>Welcome to Github Scrapper</h1>
     </div>
 
     <div>
-        <div class="inp">
-            <h3>Enter the User or Organization :</h3>
-            <input type="text" name="user_org" id="user-org" placeholder="Eg - nodejs">
-            
-            <h3>Enter the Repository Name :</h3>
-            <input type="text" name="repo" id="repo" placeholder="Eg - node">
+      <div class="inp">
+        <h3>Enter the User or Organization :</h3>
+        <input
+          type="text"
+          name="user_org"
+          id="user-org"
+          placeholder="Eg - nodejs"
+        />
 
-            <p></p>                <input type="radio" id="gfi" name="iss" value="gfi">
-            <label for="gfi">Good First Issue</label>
+        <h3>Enter the Repository Name :</h3>
+        <input type="text" name="repo" id="repo" placeholder="Eg - node" />
 
-            <input type="radio" id="doc" name="iss" value="doc">
-            <label for="doc">Documentation</label>
+        <p></p>
+        <input type="radio" id="gfi" name="iss" value="gfi" />
+        <label for="gfi">Good First Issue</label>
 
-            <input type="radio" id="all" name="iss" value="all">
-            <label for="all">All Issues</label>
-   
+        <input type="radio" id="doc" name="iss" value="doc" />
+        <label for="doc">Documentation</label>
 
-            <button id="darkModeBtn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
-        </div>
+        <input type="radio" id="all" name="iss" value="all" />
+        <label for="all">All Issues</label>
+
+        <button id="darkModeBtn" onclick="toggleDarkMode()">
+          SWITCH TO DARK MODE
+        </button>
+      </div>
     </div>
-
-    
-</body>
+  </body>
 </html>
