@@ -1,55 +1,81 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-  }
-  
-
-  h1 {
-    font-size: 24px;
-    color: #333;
-  }
-  
-  h3 {
-    font-size: 18px;
-    color: #666;
-  }
-  
-  input[type="text"] {
-    width: 60%;
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-  }
-  
-body {
-    background-color: #ffffff;
-    color: #000000;
+:root {
+  --bg-dark-mode: #aeaeae;
+  --bg-light-mode: #ffffff;
+  --color-dark-mode: rgb(224, 224, 224);
+  --color-light-mode: black;
+}
+.dark-mode-bg {
+  background-color: var(--input-dark-mode);
+}
+.dark-mode-color {
+  color: var(--color-dark-mode);
+}
+.dark {
+  background-color: var(--input-dark-mode);
+  color: var(--color-dark-mode);
+}
+.dark-btn {
+  background-color: var(--bg-light-mode);
+  color: var(--color-light-mode);
 }
 
-.dark-mode {
-    background-color: #222222;
-    color: #ffffff;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  color: var(--color-light-mode);
+}
+.body-dark-mode {
+  background-color: #222222;
+  color: var(--color-dark-mode);
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+input[type="text"] {
+  width: 60%;
+  padding: 8px;
+  padding-left: 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
 }
 
 #main {
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 70px;
-  }
-  
-  #start {
-    color: #333;
-  }
-  
-  .inp {
-    padding-left: 30%;
-  }
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 70px;
+}
 
-  #user-org , 
-  #repo
-  {
+.inp {
+  padding-left: 30%;
+}
+
+#user-org,
+#repo {
   border-radius: 15px;
+}
+
+button {
+  margin: 50px;
+  height: 30px;
+  font-size: 16px;
+  border-radius: 10px;
+  background-color: #222222;
+  color: #aeaeae;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  margin-right: 0px;
+  margin-top: 0px;
+}
+button:active {
+  background: #bbbbbb;
 }
