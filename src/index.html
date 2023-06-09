@@ -1,45 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Page</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
-  </head>
-  <body>
-    <div id="main">
-      <h1>Welcome to Github Scrapper</h1>
-    </div>
 
-    <div>
-      <div class="inp">
-        <h3>Enter the User or Organization :</h3>
-        <input
-          type="text"
-          name="user_org"
-          id="user-org"
-          placeholder="Eg - nodejs"
-        />
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
 
-        <h3>Enter the Repository Name :</h3>
-        <input type="text" name="repo" id="repo" placeholder="Eg - node" />
-
-        <p></p>
-        <input type="radio" id="gfi" name="iss" value="gfi" />
-        <label for="gfi">Good First Issue</label>
-
-        <input type="radio" id="doc" name="iss" value="doc" />
-        <label for="doc">Documentation</label>
-
-        <input type="radio" id="all" name="iss" value="all" />
-        <label for="all">All Issues</label>
-
-        <button id="darkModeBtn" onclick="toggleDarkMode()">
-          SWITCH TO DARK MODE
-        </button>
+<body>
+  <nav>
+    <h1></h1>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contributers</a></li>
+    </ul>
+    <label class="switch">
+      <input type="checkbox" id="dark-mode-toggle">
+      <span class="slider"></span>
+    </label>
+  </nav>
+  <div class="center-container">
+    <main class="container">
+      <h1>Welcome to GitHub Scraper</h1>
+      <div class="user-input">
+        <h4>Enter the User or Organization:</h4>
+        <input type="text" name="input-account" placeholder="Eg - nodejs" id="input-one">
+        <h4>Enter repository name:</h4>
+        <input type="text" name="input-repository" placeholder="Eg - node" id="input-two">
       </div>
-    </div>
-  </body>
+      <div class="sorting-option">
+        <form>
+          <div class="label">
+            <input type="radio" name="option" value="option1" id="option1">
+            <label for="option1">Good First Issue</label>
+          </div>
+          <div class="label">
+            <input type="radio" name="option" value="option2" id="option2">
+            <label for="option2">Documentation</label>
+          </div>
+          <div class="label">
+            <input type="radio" name="option" value="option3" id="option3">
+            <label for="option3">All issues</label>
+          </div>
+        </form>
+      </div>
+      <div class="list-issues">
+        <div class="fetch-head">
+          <h2>Issues</h2>
+        </div>
+        <ul class="fetch-list">
+          <a href="#">
+            <li>
+              <h4>Issue No : 1234</h4>
+              <h4>Title : this is something</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi fugit at sit
+                aspernatur animi
+                unde!</p>
+            </li>
+          </a>
+          <a href="#">
+            <li>
+              <h4>Issue No : 1234</h4>
+              <h4>Title : this is something</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi fugit at sit
+                aspernatur animi
+                unde!</p>
+            </li>
+          </a>
+          <a href="#">
+            <li>
+              <h4>Issue No : 1234</h4>
+              <h4>Title : this is something</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi fugit at sit
+                aspernatur animi
+                unde!</p>
+            </li>
+          </a>
+          <a href="#">
+            <li>
+              <h4>Issue No : 1234</h4>
+              <h4>Title : this is something</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi fugit at sit
+                aspernatur animi
+                unde!</p>
+            </li>
+          </a>
+          <a href="#">
+            <li>
+              <h4>Issue No : 1234</h4>
+              <h4>Title : this is something</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi fugit at sit
+                aspernatur animi
+                unde!</p>
+            </li>
+          </a>
+        </ul>
+      </div>
+    </main>
+  </div>
+  <script>
+    const toggleButton = document.getElementById('dark-mode-toggle');
+    const body = document.body;
+    toggleButton.addEventListener('change', () => {
+      body.classList.toggle('dark-mode');
+    });
+  </script>
+</body>
+
 </html>
