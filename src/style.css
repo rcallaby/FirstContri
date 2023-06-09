@@ -3,7 +3,8 @@
   padding: 0;
   box-sizing: border-box;
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
   display: none;
 }
 
@@ -37,8 +38,9 @@ nav ul li a {
   transition: color 0.3s ease;
   padding: 2px 5px 2px 5px;
 }
+
 nav ul li a:hover {
- color: #486fad;
+  color: #486fad;
 }
 
 .switch {
@@ -104,20 +106,23 @@ input:checked+.slider:before {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
 }
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 20px;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.container form{
+  width: 100%;
 }
 
 .container h1 {
@@ -141,7 +146,12 @@ input:checked+.slider:before {
   border-radius: 20px;
   padding: 10px;
   border: 1px solid #ccc;
+  outline: none;
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+input[type=text]:focus {
+  border: 2px solid #555;
 }
 
 .user-input input:focus {
@@ -155,10 +165,21 @@ input:checked+.slider:before {
   transition: background-color 0.3s ease;
 }
 
-.sorting-option form {
+.sorting-option .sub-form {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
   gap: 10px;
+}
+
+.sorting-option .sub-form .all-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+ align-items: center;
+}
+
+.sorting-option .sub-form button {
+  font-size: 25px;
 }
 
 .sorting-option .label {
@@ -166,6 +187,7 @@ input:checked+.slider:before {
   border: 3px solid #486fad;
   border-radius: 15px;
   padding: 10px;
+  width: 100%;
   transition: background-color 0.3s ease;
 }
 
@@ -206,8 +228,8 @@ input:checked+.slider:before {
 .fetch-list a {
   text-decoration: none;
   color: #222;
- padding:5px;
-  
+  padding: 5px;
+
 }
 
 .fetch-list a li {
@@ -221,6 +243,7 @@ input:checked+.slider:before {
 
 .fetch-list a li:hover {
   background-color: #e4e4e4;
+  box-shadow: 0px 0px 15px #486fad;
 }
 
 /* Dark Mode */
@@ -250,6 +273,11 @@ body.dark-mode .user-input input {
 
 body.dark-mode .sorting-option label {
   color: #fff;
+}
+
+body.dark-mode .sorting-option .sub-form button {
+  background-color: #2f3136;
+  color: #ccc;
 }
 
 body.dark-mode .fetch-head h2 {
