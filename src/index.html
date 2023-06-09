@@ -25,29 +25,34 @@
   </nav>
   <div class="center-container">
     <main class="container">
-      <h1>Welcome to GitHub Scraper</h1>
-      <div class="user-input">
-        <h4>Enter the User or Organization:</h4>
-        <input type="text" name="input-account" placeholder="Eg - nodejs" id="input-one">
-        <h4>Enter repository name:</h4>
-        <input type="text" name="input-repository" placeholder="Eg - node" id="input-two">
-      </div>
-      <div class="sorting-option">
-        <form>
-          <div class="label">
-            <input type="radio" name="option" value="option1" id="option1">
-            <label for="option1">Good First Issue</label>
+      <form action="/result" method="post">
+        <h1>Welcome to GitHub Scraper</h1>
+        <div class="user-input">
+          <h4>Enter the User or Organization:</h4>
+          <input type="text" name="input-account" placeholder="Eg - nodejs" id="input-one">
+          <h4>Enter repository name:</h4>
+          <input type="text" name="input-repository" placeholder="Eg - node" id="input-two">
+        </div>
+        <div class="sorting-option">
+          <div class="sub-form">
+            <div class="all-label">
+              <div class="label">
+                <input type="radio" name="option" value="option1" id="option1">
+                <label for="option1">Good First Issue</label>
+              </div>
+              <div class="label">
+                <input type="radio" name="option" value="option3" id="option3">
+                <label for="option3">All issues</label>
+              </div>
+              <div class="label">
+                <input type="radio" name="option" value="option2" id="option2">
+                <label for="option2">Documentation</label>
+              </div>
+            </div>
+            <button type="submit" class="label">Submit</button>
           </div>
-          <div class="label">
-            <input type="radio" name="option" value="option2" id="option2">
-            <label for="option2">Documentation</label>
-          </div>
-          <div class="label">
-            <input type="radio" name="option" value="option3" id="option3">
-            <label for="option3">All issues</label>
-          </div>
-        </form>
-      </div>
+        </div>
+      </form>
       <div class="list-issues">
         <div class="fetch-head">
           <h2>Issues</h2>
