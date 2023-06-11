@@ -1,0 +1,4 @@
+functions:
+  myFunction:
+    handler: src/myFunction.handler
+    timeout: 30
